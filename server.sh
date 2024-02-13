@@ -1,0 +1,1 @@
+python3 -m llama_cpp.server --model "./models/ggml-vistral-7B-chat-q4_0.gguf" --n_gpu_layers 1 --n_ctx 4096
