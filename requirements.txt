@@ -1,7 +1,7 @@
-llama-cpp-python
-uvicorn
-starlette
-fastapi
-pydantic_settings
-sse_starlette
-starlette_context
+llama-cpp-python==0.2.42
+uvicorn==0.27.1
+starlette==0.36.3
+fastapi==0.109.2
+pydantic_settings==2.1.0
+sse_starlette==2.0.0
+starlette_context==0.3.6
