@@ -1,5 +1,5 @@
 # vistral-chat
-Vistral là một trợ lí Tiếng Việt nhiệt tình và trung thực.  
+Vistral là trợ lí Tiếng Việt nhiệt tình và trung thực.  
 
 
 ## Vistral Chat Application
@@ -24,6 +24,7 @@ Ensure you have the following:
 
 Create a folder named `models`, then download `ggml-vistral-7B-chat-q4_0.gguf` from here <https://huggingface.co/uonlp/Vistral-7B-Chat-gguf> or detail <https://huggingface.co/uonlp/Vistral-7B-Chat-gguf/blob/main/ggml-vistral-7B-chat-q4_0.gguf> and put into the `models` folder
 
+
 2. **Install llama_cpp Python**
 
 Follow the guide here to install llama_cpp Python <https://github.com/abetlen/llama-cpp-python>
@@ -46,9 +47,16 @@ or
 pip install -r requirements.txt
 ```
 
-3. **Run local OpenAI server**
 
-Run the following script to run an OpenAI API server locally. The server should run at port 8000  
+3. **Run script python test**
+```bash
+python3 test_llm.py
+```
+
+
+4. **Run local server**
+
+Run the following script to run an API server locally. The server should run at port 8000  
 
 ```bash
 python3 -m llama_cpp.server --model "./models/ggml-vistral-7B-chat-q4_0.gguf" --n_gpu_layers 1 --n_ctx 4096
@@ -59,10 +67,6 @@ or
 ```
 View API document of llama at <http://localhost:8000/docs>  
 
-4. **Run script python test**
-```bash
-python3 test_llm.py
-```
 
 5. **Start Web Server**  
 ```bash
