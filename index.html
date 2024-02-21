@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/files/favicon.ico">
   <title>Vistral Chat Demo</title>
+  <!-- https://tailwindcss.com/docs/font-size -->
   <script src="/files/tailwind.js"></script>
   <script src="/files/vue.global.js"></script>
   <script src="/files/axios.min.js"></script>
@@ -69,7 +70,7 @@
                     alt="Vistral Icon" />
                 </div>
                 <div class="flex-1 min-w-0">
-                  <p class="text-sm text-gray-800 break-normal whitespace-pre-line"
+                  <p class="text-base text-gray-800 break-normal whitespace-pre-line"
                     v-bind:class="messageClasses(message.role)">
                     <span v-if="message.role === 'user'" class="font-bold">Me: </span>
                     {{ message.content }}
