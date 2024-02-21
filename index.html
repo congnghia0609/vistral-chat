@@ -26,7 +26,7 @@
             </div>
             <div class="flex-1 min-w-0">
               <h2 class="text-xl text-gray-800 break-normal whitespace-pre-line text-left justify-start">
-                Vistral là trợ lí Tiếng Việt nhiệt tình và trung thực. Luôn trả lời một cách hữu ích nhất có thể, đồng thời giữ an toàn.
+                Vistral là trợ lí Tiếng Việt nhiệt tình và trung thực. Luôn trả lời theo cách hữu ích nhất có thể, đồng thời giữ an toàn.
               </h2>
             </div>
           </div>
@@ -41,9 +41,7 @@
               <div class="flex space-x-3">
                 <input type="text" v-model="userInput" placeholder="Type your message here..."
                   class="flex-1 rounded-md shadow-sm p-2">
-                <button type="submit" class="px-4 py-2
-                      bg-blue-500 text-white rounded-md
-                      hover:bg-blue-600">
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
                   <svg v-if="isLoading" aria-hidden="true"
                     class="w-4 relative -top-0.5 mr-1 inline-block text-gray-200 animate-spin fill-blue-600"
                     viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +66,7 @@
                 <div class="flex-shrink-0">
                   <img v-if="message.role === 'assistant'" class="w-8 h-8 rounded-full"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagONv1r-0HPnlnWClF12amS_KdrPX83zlhcXHyek&s"
-                    alt="ChatGPT Icon" />
+                    alt="Vistral Icon" />
                 </div>
                 <div class="flex-1 min-w-0">
                   <p class="text-sm text-gray-800 break-normal whitespace-pre-line"
@@ -102,7 +100,7 @@
       const messages = ref([]);
       // const messages = ref([{
       //   role: 'system',
-      //   content: "Vistral là một trợ lí Tiếng Việt nhiệt tình và trung thực. Luôn trả lời một cách hữu ích nhất có thể, đồng thời giữ an toàn."
+      //   content: "Vistral là trợ lí Tiếng Việt nhiệt tình và trung thực. Luôn trả lời theo cách hữu ích nhất có thể, đồng thời giữ an toàn."
       // }]);
       const isLoading = ref(false);
 
@@ -148,7 +146,7 @@
             "id": "chatcmpl-5a34f72e-0edc-4ff8-980b-df4316ea3da0",
             "object": "chat.completion",
             "created": 1707821154,
-            "model": "gpt-4-1106-preview",
+            "model": "ggml-vistral-7B-chat-q4_0",
             "choices": [
                 {
                     "index": 0,
@@ -167,7 +165,7 @@
           }
           */
 
-          // Append ChatGPT response
+          // Append Vistral response
           messages.value.push({
             role: 'assistant',
             content: response.data.choices[0].message.content
