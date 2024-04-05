@@ -62,9 +62,9 @@
           <!-- Chat Messages -->
           <ul class="divide-y divide-gray-200">
             <li class="py-3 sm:py-4" v-for="message in messages">
-              <div class="flex items-start space-x-4" v-if="message.role !== 'system'"
+              <div class="flex space-x-4" v-if="message.role !== 'system'"
                 v-bind:class="messageClasses(message.role)">
-                <div class="flex-shrink-0">
+                <div class="flex-shrink-0 items-start">
                   <img v-if="message.role === 'assistant'" class="w-8 h-8 rounded-full"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagONv1r-0HPnlnWClF12amS_KdrPX83zlhcXHyek&s"
                     alt="Vistral Icon" />
